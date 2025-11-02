@@ -1,0 +1,33 @@
+{
+  "resourceType": "Observation",
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "85354-9", // Blood pressure panel
+        "display": "Blood pressure panel"
+      }
+    ]
+  },
+  // PLACEHOLDER UNTUK ID PASIEN
+  "subject": { "reference": "Patient/ID_PASIEN_ANDA" }, 
+  // PLACEHOLDER UNTUK ID KUNJUNGAN
+  "encounter": { "reference": "Encounter/ID_KUNJUNGAN_ANDA" }, 
+  
+  "effectiveDateTime": "WAKTU_PENGUKURAN", // Waktu pengukuran
+  "component": [
+    { // Sistolik
+      "code": { "coding": [ { "system": "http://loinc.org", "code": "8480-6" } ] },
+      "valueQuantity": { "value": NILAI_SISTOLIK, "unit": "mmHg", "system": "http://unitsofmeasure.org", "code": "mm[Hg]" }
+    },
+    { // Diastolik
+      "code": { "coding": [ { "system": "http://loinc.org", "code": "8462-4" } ] },
+      "valueQuantity": { "value": NILAI_DIASTOLIK, "unit": "mmHg", "system": "http://unitsofmeasure.org", "code": "mm[Hg]" }
+    },
+    { // Nadi
+      "code": { "coding": [ { "system": "http://loinc.org", "code": "8867-4" } ] },
+      "valueQuantity": { "value": NILAI_NADI, "unit": "/min", "system": "http://unitsofmeasure.org", "code": "/min" }
+    }
+  ]
+}

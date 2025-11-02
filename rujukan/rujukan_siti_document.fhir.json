@@ -1,0 +1,136 @@
+{
+  "resourceType": "Bundle",
+  "type": "document", 
+  "timestamp": "2025-11-01T11:30:00+07:00",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:rujukan-comp", 
+      "resource": {
+        "resourceType": "Composition",
+        "status": "final", 
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "18761-7",
+              "display": "Referral Summary Note"
+            }
+          ]
+        },
+        "subject": { "reference": "Patient/51664913" }, 
+        "date": "2025-11-01T11:30:00+07:00",
+        "author": [
+          { "reference": "Practitioner/51664917", "display": "Bidan Rina, S.ST" }
+        ],
+        "title": "Surat Rujukan Antenatal Care (ANC) Preeklampsia",
+        "custodian": { 
+            "reference": "Organization/51664973", 
+            "display": "Klinik Pratama Sejahtera" 
+        },
+        "section": [
+          { 
+            "title": "Diagnosis dan Indikasi Rujukan",
+            "entry": [
+              { "reference": "Condition/51665484" }
+            ] 
+          },
+          { 
+            "title": "Data Tanda Vital Kritis",
+            "entry": [
+              { "reference": "Observation/51664990" }
+            ]
+          }
+        ]
+      }
+    },
+    
+    {
+      "fullUrl": "Patient/51664913",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "51664913", 
+        "name": [ { "text": "Siti Nurjanah" } ],
+        "gender": "female",
+        "birthDate": "1990-03-25",
+        "identifier": [
+          {
+            "system": "http://satusehat.id/nik",
+            "value": "3374998877665544"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Encounter/51664974", 
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "51664974", 
+        "status": "finished",
+        "class": { "code": "AMB", "display": "Ambulatory" }, 
+        "subject": { "reference": "Patient/51664913" }, 
+        "period": { "start": "2025-11-01T10:00:00+07:00", "end": "2025-11-01T10:30:00+07:00" },
+        "participant": [
+          {
+            "type": [ { "text": "Bidan yang menangani" } ],
+            "individual": { "reference": "Practitioner/51664917" } 
+          }
+        ],
+        "serviceProvider": { "reference": "Organization/51664973" } 
+      }
+    },
+    {
+      "fullUrl": "Observation/51664990", 
+      "resource": {
+        "resourceType": "Observation",
+        "id": "51664990", 
+        "status": "final",
+        "code": {
+          "coding": [
+            { "system": "http://loinc.org", "code": "85354-9", "display": "Blood pressure panel" }
+          ]
+        },
+        "subject": { "reference": "Patient/51664913" }, 
+        "encounter": { "reference": "Encounter/51664974" }, 
+        "effectiveDateTime": "2025-11-01T10:15:00+07:00",
+        "component": [
+          { 
+            "code": { "coding": [ { "system": "http://loinc.org", "code": "8480-6" } ] },
+            "valueQuantity": { "value": 150, "unit": "mmHg", "system": "http://unitsofmeasure.org", "code": "mm[Hg]" }
+          },
+          { 
+            "code": { "coding": [ { "system": "http://loinc.org", "code": "8462-4" } ] },
+            "valueQuantity": { "value": 100, "unit": "mmHg", "system": "http://unitsofmeasure.org", "code": "mm[Hg]" }
+          },
+          { 
+            "code": { "coding": [ { "system": "http://loinc.org", "code": "8867-4" } ] },
+            "valueQuantity": { "value": 95, "unit": "/min", "system": "http://unitsofmeasure.org", "code": "/min" }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Condition/51665484",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "51665484", 
+        "subject": { "reference": "Patient/51664913" }, 
+        "encounter": { "reference": "Encounter/51664974" }, 
+        "code": {
+          "coding": [
+            { "system": "http://snomed.info/sct", "code": "398254007", "display": "Pre-eclampsia" }
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            { "system": "http://terminology.hl7.org/CodeSystem/condition-clinical", "code": "active" }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            { "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status", "code": "differential" }
+          ]
+        }
+      }
+    }
+  ]
+}

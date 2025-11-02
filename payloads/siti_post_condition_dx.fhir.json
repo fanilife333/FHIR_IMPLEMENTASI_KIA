@@ -1,0 +1,31 @@
+{
+  "resourceType": "Condition",
+  "subject": { "reference": "Patient/51664913" }, 
+  "encounter": { "reference": "Encounter/51664974" }, 
+  
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "398254007", 
+        "display": "Pre-eclampsia"
+      }
+    ]
+  },
+  "clinicalStatus": {
+      "coding": [
+          {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+          }
+      ]
+  },
+  "verificationStatus": {
+      "coding": [
+          {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "differential"
+          }
+      ]
+  }
+}

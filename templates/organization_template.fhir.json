@@ -1,0 +1,21 @@
+{
+  "resourceType": "Organization",
+  "name": "NAMA_FASYANKES_ANDA",
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+          "code": "prov",
+          "display": "Healthcare Provider"
+        }
+      ]
+    }
+  ],
+  "identifier": [
+    {
+      "system": "http://satusehat.id/fasyankes-id",
+      "value": "ID_FASYANKES_ANDA"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "resourceType": "Patient",
+  "name": [ { "text": "NAMA_LENGKAP_PASIEN" } ], // <-- PLACEHOLDER
+  "gender": "female",
+  "birthDate": "TANGGAL_LAHIR", // <-- PLACEHOLDER
+  "identifier": [
+    {
+      "system": "http://satusehat.id/nik",
+      "value": "NOMOR_NIK_PASIEN" // <-- PLACEHOLDER
+    }
+  ]
+}

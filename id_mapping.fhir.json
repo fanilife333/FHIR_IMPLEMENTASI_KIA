@@ -1,0 +1,40 @@
+{
+  "last_updated": "2025-11-02T18:35:00Z",
+  "data_pasien": {
+    "siti_nurjanah": {
+      "nik": "3374998877665544", // Data identitas unik yang kita kirim
+      "id_patient": "51664913", // ID PERMANEN DARI LANGKAH 1
+      "riwayat_kunjungan": {
+        "kunjungan_anc_nov2025": {
+          "id_encounter": "51664974",
+          "id_observation_ttv": "51664990",
+          "id_condition_dx": "51665484"
+        }
+      }
+    },
+    "susi_lestari": 
+        {
+        "id_patient": "51665620", 
+        "riwayat_kunjungan": 
+            {
+            "kunjungan_anc_jan2026": 
+                {
+                "id_encounter": "51665621",
+                "id_observation_hb": "51665622",
+                "id_condition_dx": "51665624"
+                }
+            }
+        }
+}
+    // Pasien lain akan ditambahkan di sini
+  },
+
+"data_fasyankes_nakes": {
+    "klinik_sejahtera": {
+      "id_organization": "51664973"
+    },
+    "bidan_rina": {
+      "nakes_id": "IDNKS1234567",
+      "id_practitioner": "51664917"
+    }
+}

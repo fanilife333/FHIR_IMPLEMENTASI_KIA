@@ -1,0 +1,29 @@
+{
+  "resourceType": "Condition",
+  "subject": { "reference": "Patient/51665620" },
+  "encounter": { "reference": "Encounter/51665629" },
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "271737000",
+        "display": "Anemia during pregnancy"
+      }
+    ]
+  },
+  "clinicalStatus": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+        "code": "active"
+      }
+    ]
+  },
+  "verificationStatus": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+        "code": "confirmed"
+    ]
+  }
+}

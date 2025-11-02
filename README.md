@@ -80,5 +80,3 @@ Dokumen rujukan (Surat Rujukan Digital) dihasilkan sebagai **Bundle `document`**
 Proyek ini berhasil membuktikan kemampuan mengelola data pasien kebidanan patologi sesuai standar FHIR R4. Keberhasilan utama terletak pada **skalabilitas** dan **efisiensi _workflow_** melalui penggunaan _template_ yang terstruktur dan produksi dokumen legal (`Bundle document`) yang siap dipertukarkan.
 
 ---
-
-**Tips Tambahan di VS Code:** Pastikan Anda menggunakan fitur **"Open Preview"** (`Ctrl+K V` atau `Cmd+K V`) di VS Code untuk melihat _rendering_ Markdown yang benar (dengan tabel dan _heading_ yang diformat).

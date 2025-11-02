@@ -1,0 +1,30 @@
+{
+  "data_fasyankes": {
+    "faskes_utama": {
+      "id_organization": "ID_ORGANIZATION_ANDA",
+      "id_practitioner": "ID_PRACTITIONER_ANDA"
+    }
+  },
+  "data_pasien": {
+    "NAMA_PASIEN_1_KEY": {
+      "id_patient": "ID_PATIENT_1",
+      "riwayat_kunjungan": {
+        "KUNJUNGAN_1_KEY": {
+          "id_encounter": "ID_ENCOUNTER_1",
+          "id_observation_utama": "ID_OBSERVATION_1",
+          "id_condition_dx": "ID_CONDITION_1"
+        }
+      }
+    },
+    "NAMA_PASIEN_2_KEY": { // <-- Slot untuk Pasien Susi
+      "id_patient": "ID_PATIENT_2",
+      "riwayat_kunjungan": {
+        "KUNJUNGAN_2_KEY": {
+          "id_encounter": "ID_ENCOUNTER_2",
+          "id_observation_hb": "ID_OBSERVATION_HB_2",
+          "id_condition_dx": "ID_CONDITION_DX_2"
+        }
+      }
+    }
+  }
+}

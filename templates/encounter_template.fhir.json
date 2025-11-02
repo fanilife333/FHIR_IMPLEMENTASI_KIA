@@ -1,0 +1,36 @@
+{
+  "resourceType": "Encounter",
+  "status": "finished",
+  "class": {
+    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "code": "AMB", 
+    "display": "Ambulatory" // Kunjungan Rawat Jalan (ANC)
+  },
+  
+  // 1. REFERENSI PASIEN (DARI LANGKAH 1)
+  "subject": { 
+    "reference": "Patient/ID_PASIEN_ANDA" // <-- PLACEHOLDER: Ganti dengan ID Patient/51664913
+  }, 
+  
+  "period": { 
+    "start": "WAKTU_MULAI_KUNJUNGAN", 
+    "end": "WAKTU_SELESAI_KUNJUNGAN" 
+  },
+  
+  "participant": [
+    {
+      "type": [ 
+        { "text": "Tenaga Kesehatan yang menangani" } 
+      ],
+      // 2. REFERENSI PRACTITIONER (DARI LANGKAH 2)
+      "individual": { 
+        "reference": "Practitioner/ID_BIDAN_ANDA" // <-- PLACEHOLDER: Ganti dengan ID Practitioner/51664917
+      } 
+    }
+  ],
+  
+  // 3. REFERENSI ORGANISASI/FASYANKES (DARI LANGKAH 3)
+  "serviceProvider": { 
+    "reference": "Organization/ID_FASYANKES_ANDA" // <-- PLACEHOLDER: Ganti dengan ID Organization/5166493
+  } 
+}

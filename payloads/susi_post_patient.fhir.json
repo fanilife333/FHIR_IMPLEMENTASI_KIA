@@ -1,0 +1,12 @@
+{
+  "resourceType": "Patient",
+  "name": [ { "text": "Susi Lestari" } ],
+  "gender": "female",
+  "birthDate": "1995-09-05",
+  "identifier": [
+    {
+      "system": "http://satusehat.id/nik",
+      "value": "3374998877661122"
+    }
+  ]
+}

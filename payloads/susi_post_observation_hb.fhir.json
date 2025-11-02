@@ -1,0 +1,22 @@
+{
+  "resourceType": "Observation",
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "718-7", 
+        "display": "Hemoglobin [Mass/volume] in Blood"
+      }
+    ]
+  },
+  "subject": { "reference": "Patient/51665620" },
+  "encounter": { "reference": "Encounter/51665621" },
+  "effectiveDateTime": "2026-01-15T09:15:00+07:00",
+  "valueQuantity": {
+    "value": 9.5, 
+    "unit": "g/dL",
+    "system": "http://unitsofmeasure.org",
+    "code": "g/dL"
+  }
+}

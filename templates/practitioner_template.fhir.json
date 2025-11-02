@@ -1,0 +1,16 @@
+{
+  "resourceType": "Practitioner",
+  "name": [
+    {
+      "text": "NAMA_LENGKAP_NAKES",
+      "family": "NAMA_BELAKANG",
+      "given": ["NAMA_DEPAN", "GELAR"]
+    }
+  ],
+  "identifier": [
+    {
+      "system": "http://satusehat.id/nakes-id",
+      "value": "ID_NAKES_SIMULASI" 
+    }
+  ]
+}

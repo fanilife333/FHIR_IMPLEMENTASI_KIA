@@ -1,0 +1,16 @@
+{
+  "resourceType": "Practitioner",
+  "name": [
+    {
+      "text": "Bidan Rina Lestari, S.ST",
+      "family": "Lestari",
+      "given": ["Rina", "S.ST"]
+    }
+  ],
+  "identifier": [
+    {
+      "system": "http://satusehat.id/nakes-id",
+      "value": "IDNKS1234567"
+    }
+  ]
+}

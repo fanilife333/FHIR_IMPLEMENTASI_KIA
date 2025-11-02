@@ -1,0 +1,12 @@
+{
+  "resourceType": "Patient",
+  "name": [ { "text": "Siti Nurjanah" } ],
+  "gender": "female",
+  "birthDate": "1990-03-25",
+  "identifier": [
+    {
+      "system": "http://satusehat.id/nik",
+      "value": "3374998877665544"
+    }
+  ]
+}

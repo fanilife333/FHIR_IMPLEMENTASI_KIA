@@ -1,0 +1,64 @@
+{
+  "resourceType": "Bundle",
+  "type": "document", 
+  "timestamp": "WAKTU_DOKUMEN_DIBUAT",
+  "entry": [
+    // =========================================================
+    // 1. COMPOSITION (WAJIB ENTRY PERTAMA)
+    // =========================================================
+    {
+      "fullUrl": "urn:uuid:rujukan-comp", 
+      "resource": {
+        "resourceType": "Composition",
+        "status": "final", 
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "18761-7",
+              "display": "Referral Summary Note"
+            }
+          ]
+        },
+        "subject": { "reference": "Patient/ID_PASIEN_ANDA" }, 
+        "date": "TANGGAL_DOKUMEN",
+        "author": [
+          { "reference": "Practitioner/ID_BIDAN_ANDA", "display": "NAMA BIDAN" }
+        ],
+        "title": "JUDUL DOKUMEN RUJUKAN",
+        "custodian": { 
+            "reference": "Organization/ID_FASYANKES_ANDA", 
+            "display": "NAMA FASYANKES ASAL" 
+        },
+        "section": [
+          { 
+            "title": "Diagnosis dan Indikasi",
+            "entry": [
+              { "reference": "Condition/ID_KONDISI_ANDA" }
+            ]
+          },
+          { 
+            "title": "Data Klinis Kritis",
+            "entry": [
+              { "reference": "Observation/ID_OBSERVASI_ANDA" }
+            ]
+          }
+          // Tambahkan section lain sesuai kebutuhan (medikasi, alergi, dll.)
+        ]
+      }
+    },
+    // =========================================================
+    // 2. RESOURCE PENDUKUNG MANDIRI (DIAMBIL DARI GET BERDASARKAN ID PERMANEN)
+    // =========================================================
+    // Struktur Wajib: { "fullUrl": "ResourceType/ID", "resource": { "resourceType": "...", "id": "...", ... } }
+    
+    // PATIENT
+    // ENCOUNTER
+    // PRACTITIONER
+    // ORGANIZATION
+    // CONDITION
+    // OBSERVATION
+    
+    // ... dan resource lain yang dirujuk di Composition.section
+  ]
+}
