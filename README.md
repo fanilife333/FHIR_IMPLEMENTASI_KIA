@@ -10,7 +10,7 @@ Proyek ini mendemonstrasikan kapabilitas _workflow_ FHIR yang _interoperable_ da
 
 1.  **Cakupan Resource yang Ekstensif:** Menguasai _POST_ dan _Reference_ lebih dari 20 _Resource_ dari tiga domain utama: Klinis, Logistik/SDM, dan Finansial.
 2.  **Integrasi Lintas Domain:** Menghubungkan data Prosedural (**Procedure**) dengan Logistik (**Location**, **PractitionerRole**) dan Finansial (**Claim**).
-3.  **Siklus Finansial Penuh:** Melaksanakan dan mendokumentasikan proses _billing_ lengkap (**Claim** $\rightarrow$ **ClaimResponse** $\rightarrow$ **ExplanationOfBenefit**), mencakup peran Provider dan Payer.
+3.  **Siklus Finansial Penuh:** Melaksanakan dan mendokumentasikan proses _billing_ lengkap (**Claim** -> **ClaimResponse** -> **ExplanationOfBenefit**), mencakup peran Provider dan Payer.
 4.  **Adopsi Standar Terminologi:** Konsisten menggunakan sistem kode standar **SNOMED CT**, **LOINC**, dan **UCUM** untuk menjamin interpretasi data yang universal dan akurat.
 5.  **Arsitektur Dokumentasi Profesional:** Memelihara _ID Mapping_ dan _Terminology Registry_ terpusat sebagai sumber kebenaran tunggal (_Single Source of Truth_).
 
