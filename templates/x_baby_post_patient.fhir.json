@@ -1,0 +1,43 @@
+{
+  "resourceType": "Patient",
+  "name": [
+    {
+      "use": "usual",
+      "text": "[NAMA SEMENTARA BAYI]"
+    }
+  ],
+  "gender": "[female/male]",
+  "birthDate": "[TANGGAL LAHIR (2025-11-18)]",
+  "multipleBirthBoolean": false,
+  "managingOrganization": {
+    "reference": "Organization/[ID ORGANISASI FASYANKES]" // <-- HARUS DIGANTI
+  },
+  "contact": [
+    {
+      "relationship": [
+        {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+              "code": "N" // Kode Tetap untuk Next of kin
+            }
+          ]
+        }
+      ],
+      "name": {
+        "text": "[NAMA IBU DIANA]"
+      },
+      "period": {
+        "start": "[TANGGAL LAHIR]"
+      }
+    }
+  ],
+  "link": [ 
+    {
+      "other": {
+        "reference": "Patient/[ID PATIENT IBU DIANA]" // <-- HARUS DIGANTI
+      },
+      "type": "seealso" // Kode Tetap: Referensi ke pasien lain
+    }
+  ]
+}

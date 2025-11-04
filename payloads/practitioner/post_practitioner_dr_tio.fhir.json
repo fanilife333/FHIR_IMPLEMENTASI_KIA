@@ -1,0 +1,24 @@
+{
+  "resourceType": "Practitioner",
+  "name": [
+    {
+      "text": "Dr. Tio, Sp.An",
+      "family": "Tio",
+      "given": ["Tio"],
+      "prefix": ["Dr."]
+    }
+  ],
+  "identifier": [
+    {
+      "system": "http://satusehat.id/nakes-id", 
+      "value": "IDNKS6667778" 
+    }
+  ],
+  "qualification": [ 
+    {
+      "code": {
+        "text": "Spesialis Anastesi"
+      }
+    }
+  ]
+}

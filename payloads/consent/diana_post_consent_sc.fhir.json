@@ -1,0 +1,74 @@
+{
+  "resourceType": "Consent",
+  "status": "active",
+  "scope": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/consentscope",
+        "code": "treatment",
+        "display": "Treatment"
+      }
+    ]
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "INFA"
+        }
+      ]
+    }
+  ],
+  "patient": {
+    "reference": "Patient/51670077"
+  },
+  "dateTime": "2025-11-18T08:00:00+07:00",
+  "policyRule": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "713089003",
+        "display": "Verification of consent for planned procedure"
+      }
+    ]
+  },
+  "performer": [
+    {
+      "reference": "Practitioner/51664917"
+    }
+  ],
+  "provision": {
+    "type": "permit",
+    "period": {
+      "start": "2025-11-18T08:00:00+07:00",
+      "end": "2025-11-18T13:00:00+07:00"
+    },
+    "actor": [
+      {
+        "role": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+              "code": "PRCP"
+            }
+          ]
+        },
+        "reference": {
+          "display": "Bapak Budi (Suami/Wali)" 
+        }
+      }
+    ],
+    "action": [
+      {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "200144004",
+            "display": "Caesarean section"
+          }
+        ]
+      }
+    ]
+  }
+}

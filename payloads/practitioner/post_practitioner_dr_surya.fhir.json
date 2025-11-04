@@ -1,0 +1,24 @@
+{
+  "resourceType": "Practitioner",
+  "name": [
+    {
+      "text": "Dr. Surya, Sp.A",
+      "family": "Surya",
+      "given": ["Surya"],
+      "prefix": ["Dr."]
+    }
+  ],
+  "identifier": [
+    {
+      "system": "http://satusehat.id/nakes-id", 
+      "value": "IDNKS3334445"
+    }
+  ],
+  "qualification": [ 
+    {
+      "code": {
+        "text": "Spesialis Anak"
+      }
+    }
+  ]
+}

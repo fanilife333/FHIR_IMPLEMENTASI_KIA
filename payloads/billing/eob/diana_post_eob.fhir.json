@@ -1,0 +1,63 @@
+{
+  "resourceType": "ExplanationOfBenefit",
+  "status": "active",
+  "type": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/claim-type",
+        "code": "institutional"
+      }
+    ]
+  },
+  "use": "claim",
+  "patient": {
+    "reference": "Patient/51670077"
+  },
+  "created": "2025-11-25T10:05:00+07:00", 
+  "insurer": {
+    "reference": "Organization/51907580"
+  },
+  "request": {
+    "reference": "Claim/51907108" 
+  },
+  "outcome": "complete",
+  "disposition": "Claim paid in full as per policy terms.",
+  "precedence": 1,
+  "benefitPeriod": {
+    "start": "2025-11-18",
+    "end": "2025-11-20"
+  },
+  "item": [
+    {
+      "sequence": 1,
+      "adjudication": [
+        {
+          "category": { "coding": [{ "code": "submitted" }] },
+          "amount": { "value": 20450000.00, "currency": "IDR" }
+        },
+        {
+          "category": { "coding": [{ "code": "allowed" }] },
+          "amount": { "value": 20450000.00, "currency": "IDR" }
+        },
+        {
+          "category": { "coding": [{ "code": "benefit" }] },
+          "amount": { "value": 18405000.00, "currency": "IDR" }
+        },
+        {
+          "category": { "coding": [{ "code": "patient" }] },
+          "amount": { "value": 2045000.00, "currency": "IDR" } 
+        }
+      ]
+    }
+  ],
+  "total": [
+    {
+      "category": { "coding": [{ "code": "submitted" }] },
+      "amount": { "value": 20450000.00, "currency": "IDR" }
+    },
+    {
+      "category": { "coding": [{ "code": "benefit" }] },
+      "amount": { "value": 18405000.00, "currency": "IDR" }
+    }
+  ]
+}

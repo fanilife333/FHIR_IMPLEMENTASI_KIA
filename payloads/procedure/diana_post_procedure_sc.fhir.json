@@ -1,0 +1,59 @@
+{
+  "resourceType": "Procedure",
+  "id": "51790406",
+  "status": "completed",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "200144004",
+        "display": "Caesarean section"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/51670077"
+  },
+  "encounter": {
+    "reference": "Encounter/51670081"
+  },
+  "performedDateTime": "2025-11-18T09:30:00+07:00",
+  "reasonReference": [
+    {
+      "reference": "Condition/51786524" 
+    }
+  ],
+  "basedOn": [ 
+    {
+      "reference": "ServiceRequest/51843312" 
+    }
+  ],
+  "supportingInfo": [ 
+    {
+      "reference": "Consent/51842430" 
+    }
+  ],
+  "performer": [
+    {
+      "function": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction",
+            "code": "PCP",
+            "display": "Primary Care Provider"
+          }
+        ]
+      },
+      "actor": {
+        "reference": "PractitionerRole/51844904"
+      }
+    }
+  ],
+  "location": { 
+    "reference": "Location/51843117",
+    "display": "RSIA BUNDA UTAMA - Kamar Operasi"
+  },
+  "outcome": {
+    "text": "Lahir hidup, bayi perempuan"
+  }
+}

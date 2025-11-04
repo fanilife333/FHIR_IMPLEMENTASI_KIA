@@ -1,0 +1,102 @@
+{
+    "resourceType": "Observation",
+    "status": "final",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                    "code": "procedure",
+                    "display": "Procedure"
+                }
+            ]
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "29548-8",
+                "display": "Obstetrical panel"
+            }
+        ]
+    },
+
+    "subject": {"reference": "Patient/51670077"},
+    "encounter": {"reference": "Encounter/51670081"},
+    "effectiveDateTime": "2025-11-03T07:32:00+07:00",
+
+    "component": [
+        {
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://loinc.org",
+                        "code": "49051-6",
+                        "display": "Gestational age"
+                    }
+                ]
+            },
+            "valueQuantity": {
+                "value": 36,
+                "unit": "wk",
+                "system": "http://unitsofmeasure.org",
+                "code": "wk"
+            }
+        },
+        {
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://loinc.org",
+                        "code": "11881-0",
+                        "display": "Fundal height"
+                    }
+                ]
+            },
+            "valueQuantity": {
+                "value": 30,
+                "unit": "cm",
+                "system": "http://unitsofmeasure.org",
+                "code": "cm"
+            }
+        },
+        {
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://loinc.org",
+                        "code": "11948-7",
+                        "display": "Fetal heart rate"
+                    }
+                ]
+            },
+            "valueQuantity": {
+                "value": 140,
+                "unit": "/min",
+                "system": "http://unitsofmeasure.org",
+                "code": "/min"
+            }
+        },
+        {
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://loinc.org",
+                        "code": "11636-8",
+                        "display": "Fetus presentation"
+                    }
+                ]
+            },
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "18404000",
+                        "display": "Breech presentation"
+                    }
+                ]
+            }
+        }
+    ]
+}

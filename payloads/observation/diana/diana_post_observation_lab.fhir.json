@@ -1,0 +1,72 @@
+{
+    "resourceType": "Observation",
+    "id": "51788745",
+    "status": "final",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                    "code": "laboratory",
+                    "display": "Laboratory"
+                }
+            ]
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "58410-2",
+                "display": "CBC panel with auto diff"
+            }
+        ]
+    },
+    "subject": {"reference": "Patient/51670077"},
+    "encounter": {"reference": "Encounter/51670081"},
+    "effectiveDateTime": "2025-11-03T09:30:00+07:00",
+    "performer": [ 
+    {
+      "reference": "Organization/51840512"
+    }
+  ],
+    "component": [
+        {
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://loinc.org",
+                        "code": "718-7",
+                        "display": "Hemoglobin"
+                    }
+                ]
+            },
+            "valueQuantity": {
+                "value": 10.5,
+                "unit": "g/dl",
+                "system": "http://unitsofmeasure.org",
+                "code": "g/dl"
+            }
+        },
+        {
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://loinc.org",
+                        "code": "883-9",
+                        "display": "Blood group ABO type"
+                    }
+                ]
+            },
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/ct",
+                        "code": "165749002",
+                        "display": "Blood group A type"
+                    }
+                ]
+            }
+        }
+    ]
+}

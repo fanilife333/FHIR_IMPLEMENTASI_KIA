@@ -1,0 +1,23 @@
+{
+  "resourceType": "Practitioner",
+  "name": [
+    {
+      "text": "Sinta, Amd.Kep",
+      "family": "Sinta",
+      "given": ["Sinta"]
+    }
+  ],
+  "identifier": [
+    {
+      "system": "http://satusehat.id/nakes-id", 
+      "value": "IDNKS9012345" 
+    }
+  ],
+  "qualification": [ 
+    {
+      "code": {
+        "text": "Perawat Ahli Madya"
+      }
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "SYSTEM_URI": {
+    "LOINC": "http://loinc.org",
+    "SNOMED_CT": "http://snomed.info/sct",
+    "FHIR_OBSERVATION_CATEGORY": "http://terminology.hl7.org/CodeSystem/observation-category",
+    "FHIR_IDENTIFIER_TYPE": "http://terminology.hl7.org/CodeSystem/v2-0203",
+    "SATUSEHAT_NIK": "http://satusehat.id/nik",
+    "SATUSEHAT_NAKES_ID": "http://satusehat.id/nakes-id",
+    "UCUM": "http://unitsofmeasure.org",
+    "FHIR_CLAIM_TYPE": "http://terminology.hl7.org/CodeSystem/claim-type",
+    "FHIR_ORG_TYPE": "http://terminology.hl7.org/CodeSystem/organization-type",
+    "FHIR_SERVICE_PRODUCT": "http://terminology.hl7.org/CodeSystem/service-product",
+    "FHIR_ADJUDICATION": "http://terminology.hl7.org/CodeSystem/adjudication" 
+  },
+
+  "FIXED_CODES": {
+    "ENCOUNTER_CLASS_AMB": "AMB", 
+    "ENCOUNTER_CLASS_INP": "IMP", 
+    "VITAL_SIGNS_CODE": "vital-signs", 
+    "PROBLEM_LIST_ITEM_CODE": "problem-list-item", 
+    
+    // --- UCUM WAJIB ---
+    "UCUM_CELSIUS": "Cel",
+    "UCUM_MMHG": "mm[Hg]",
+    "UCUM_PER_MINUTE": "/min",
+    "UCUM_KG": "kg",
+    "UCUM_CM": "cm",
+    "UCUM_WEEK": "wk", 
+    "UCUM_SCORE": "{score}",
+    "UCUM_MG": "mg", 
+    "UCUM_DAYS": "d",
+
+    // --- LOINC KLINIS ---
+    "TTV_MASTER_LOINC": "8716-3", 
+    "TEMP_LOINC": "8310-5",
+    "HR_LOINC": "8867-4",
+    "SBP_LOINC": "8480-6",
+    "DBP_LOINC": "8462-4",
+    "RR_LOINC": "9279-1", 
+    
+    "OBSTETRIC_MASTER_LOINC": "29548-8", 
+    "FHR_LOINC": "11948-7",
+    "FH_LOINC": "11881-0",
+    "GA_LOINC": "49051-6",
+    
+    "APGAR_MASTER_LOINC": "9275-0",
+    "APGAR_5MIN_LOINC": "72105-8",
+    "BB_LOINC": "29463-7",
+    "PB_LOINC": "8302-2",
+    "BB_PB_PANEL_LOINC": "85353-1",
+
+    // --- SNOMED CT: DX & PROCEDURE ---
+    "SNOMED_DX_PLACENTA_PREVIA": "198903000",
+    "SNOMED_PROC_CS": "200144004",
+    "SNOMED_PROC_VITK": "736388004",
+    "SNOMED_PROC_HB0": "170371001",
+    "SNOMED_CONSENT_VERIF": "713089003",
+    "SNOMED_SRV_REQ_SURG": "387713003",
+
+    // --- SNOMED CT: ROLE NAKES ---
+    "SNOMED_ROLE_OBGYN": "394585009",
+    "SNOMED_ROLE_MIDWIFE": "45956004",
+    "SNOMED_ROLE_NURSE": "106292003",
+    "SNOMED_ROLE_ANESTHESIOLOGIST": "88189002", 
+    "SNOMED_ROLE_PEDIATRICS": "394537008", 
+
+    // --- SNOMED CT: MEDIKASI & RUTE ---
+    "SNOMED_MED_KETOROLAC": "103036009",
+    "SNOMED_FORM_INJECTION": "385219001", 
+    "SNOMED_ROUTE_IV": "47625008", 
+    "SNOMED_ROUTE_SPINAL": "446690004", 
+
+    // --- KODE FINANSIAL & TIPE ---
+    "CLAIM_TYPE_INSTITUTIONAL": "institutional",
+    "ORG_TYPE_INSURER": "ins",
+    "SRV_PRODUCT_ROOM": "room",
+    "CLAIM_INFO_CATEGORY": "info",
+    "ADJUDICATION_ELIGIBLE": "eligible",
+    "ADJUDICATION_COPAY": "copay",
+    "ADJUDICATION_BENEFIT": "benefit",
+    "ADJUDICATION_SUBMITTED": "submitted",
+    "ADJUDICATION_ALLOWED": "allowed"
+  }
+}

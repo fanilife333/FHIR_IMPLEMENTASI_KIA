@@ -1,0 +1,22 @@
+{
+  "resourceType": "Medication",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "103036009", 
+        "display": "Drug containing ketorolac"
+      }
+    ]
+  },
+  "status": "active",
+  "form": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "385219001",
+        "display": "Solution for injection"
+      }
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "resourceType": "MedicationAdministration",
+  "status": "completed",
+  "medicationReference": {
+    "reference": "Medication/51904768"
+  },
+  "subject": {
+    "reference": "Patient/51670077"
+  },
+  "context": {
+    "reference": "Encounter/51670081"
+  },
+  "effectiveDateTime": "2025-11-18T09:00:00+07:00",
+  "performer": [
+    {
+      "actor": {
+        "reference": "PractitionerRole/51904339"
+      }
+    }
+  ],
+  "dosage": {
+    "text": "Bupivacaine 10 mg (Anastesi Spinal)",
+    "route": {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "446690004",
+          "display": "Spinal route"
+        }
+      ]
+    },
+    "dose": {
+      "value": 10,
+      "unit": "mg",
+      "system": "http://unitsofmeasure.org",
+      "code": "mg"
+    }
+  }
+}

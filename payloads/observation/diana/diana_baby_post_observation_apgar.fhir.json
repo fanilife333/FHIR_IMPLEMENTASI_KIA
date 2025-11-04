@@ -1,0 +1,49 @@
+{
+  "resourceType": "Observation",
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "exam"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "9275-0",
+        "display": "Apgar score"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/51836983" 
+  },
+  "encounter": {
+    "reference": "Encounter/51670081"
+  },
+  "effectiveDateTime": "2025-11-18T09:35:00+07:00",
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "72105-8",
+            "display": "Apgar score at 5 minutes"
+          }
+        ]
+      },
+      "valueQuantity": {
+        "value": 9,
+        "unit": "{score}",
+        "system": "http://unitsofmeasure.org",
+        "code": "{score}"
+      }
+    }
+  ]
+}

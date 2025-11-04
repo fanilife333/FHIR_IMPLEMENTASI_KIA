@@ -1,0 +1,99 @@
+{
+  "last_updated": "2025-11-25T10:05:00Z",
+  "data_pasien": {
+    "siti_nurjanah": {
+      "nik": "3374998877665544",
+      "id_patient": "51664913",
+      "riwayat_kunjungan": {
+        "kunjungan_anc_nov2025": {
+          "id_encounter": "51664974",
+          "id_observation_ttv": "51664990",
+          "id_condition_dx": "51665484"
+        }
+      }
+    },
+    "susi_lestari": {
+      "id_patient": "51665620",
+      "riwayat_kunjungan": {
+        "kunjungan_anc_jan2026": {
+          "id_encounter": "51665621",
+          "id_observation_hb": "51665622",
+          "id_condition_dx": "51665624",
+          "id_list_problems": "51670049"
+        }
+      }
+    },
+    "diana_putri": {
+      "id_patient": "51670077",
+      "riwayat_kunjungan": {
+        "kunjungan_anc_nov2025": {
+          "id_encounter": "51670081",
+          "id_observation_ttv": "51774232",
+          "id_observation_kebidanan": "51783445",
+          "id_observation_lab": "51788745",
+          "id_allergy_intolerance": "51789802",
+          "id_condition_dx": "51786524",
+          "id_procedure_sc": "51790406",
+          "id_consent_sc": "51842430",
+          "id_servicerequest_sc": "51843312",
+          "id_patient_bayi": "51836983",
+          "id_obs_baby_apgar": "51847215",
+          "id_obs_baby_bbpb": "51847402",
+          "id_proc_baby_newborn": "51847868",
+          // MEDIKASI & LOKASI
+          "id_medication_ketorolac": "51848808",
+          "id_medadmin_ketorolac": "51849689",
+          "id_medication_bupivacaine": "51904768",
+          "id_medadmin_bupivacaine": "51906239",
+          "id_location_ok": "51843117",
+          "id_location_ri_ibu": "51902539",
+          "id_location_ri_gabung": "51902482",
+          "id_location_ri_neonatus": "51902971",
+          // FINANSIAL BARU
+          "id_claim": "51907108",
+          "id_claim_response": "51915560",
+          "id_eob": "51915979"
+        }
+      }
+    }
+  },
+  "data_fasyankes_nakes": {
+    "klinik_sejahtera": {
+      "id_organization": "51664973"
+    },
+    "bidan_rina": {
+      "nakes_id": "IDNKS1234567",
+      "id_practitioner": "51664917",
+      "id_practitionerrole": "51845036"
+    },
+    "dr_bima": {
+      "nakes_id": "IDNKS7654321",
+      "id_practitioner": "51838958",
+      "id_practitionerrole": "51844904"
+    },
+    "perawat_sinta": {
+      "nakes_id": "IDNKS9012345",
+      "id_practitioner": "51849157",
+      "id_practitionerrole": "51849548"
+    },
+    "dr_surya_spa": {
+      "nakes_id": "IDNKS3334445",
+      "id_practitioner": "51903103",
+      "id_practitionerrole": "51903788"
+    },
+    "dr_tio_span": {
+      "nakes_id": "IDNKS6667778",
+      "id_practitioner": "51904069",
+      "id_practitionerrole": "51904339"
+    },
+    "lab_sentral": {
+      "id_organization": "51840512"
+    },
+    "rsia_bunda_utama": {
+      "id_organization": "51840814"
+    },
+    "asuransi_sehat_sejahtera": {
+      "id_organization": "51907580" // <-- PAYER BARU
+    }
+  }
+}

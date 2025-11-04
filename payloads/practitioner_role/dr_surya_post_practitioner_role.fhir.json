@@ -1,0 +1,20 @@
+{
+  "resourceType": "PractitionerRole",
+  "practitioner": {
+    "reference": "Practitioner/51903103" 
+  },
+  "organization": {
+    "reference": "Organization/51840814" 
+  },
+  "code": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "394537008",
+          "display": "Pediatrics specialty"
+        }
+      ]
+    }
+  ]
+}

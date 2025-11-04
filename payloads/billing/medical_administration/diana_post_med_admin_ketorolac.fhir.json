@@ -1,0 +1,39 @@
+{
+  "resourceType": "MedicationAdministration",
+  "status": "completed",
+  "medicationReference": {
+    "reference": "Medication/51848808"
+  },
+  "subject": {
+    "reference": "Patient/51670077"
+  },
+  "context": {
+    "reference": "Encounter/51670081"
+  },
+  "effectiveDateTime": "2025-11-18T12:00:00+07:00", 
+  "performer": [
+    {
+      "actor": {
+        "reference": "PractitionerRole/51849548"
+      }
+    }
+  ],
+  "dosage": {
+    "text": "1 ampul Ketorolac 30 mg IV",
+    "route": {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "47625008",
+          "display": "Intravenous route"
+        }
+      ]
+    },
+    "dose": {
+      "value": 30,
+      "unit": "mg",
+      "system": "http://unitsofmeasure.org",
+      "code": "mg"
+    }
+  }
+}

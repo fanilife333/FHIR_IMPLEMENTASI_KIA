@@ -1,82 +1,82 @@
-### FHIR R4 Implementation for Obstetric Pathology
+# FHIR R4 Implementation: Comprehensive Clinical, Logistics, and Financial Workflow
 
-Dokumentasi ini merinci proses implementasi standar Fast Healthcare Interoperability Resources (FHIR) Release 4 untuk pencatatan kasus Kebidanan Patologi (Antenatal Care/ANC dengan komplikasi) pada sistem Rekam Medis Elektronik (RME) di Fasilitas Kesehatan.
-
----
-
-### 1. Tujuan Proyek
-
-Proyek ini bertujuan mendemonstrasikan _workflow_ FHIR yang **skalabel** dan **interoperabel** untuk kasus klinis spesifik, dengan fokus pada:
-
-1.  **Cakupan Resource:** Menguasai _POST_ dan _GET_ enam Resource FHIR inti (**Patient**, **Encounter**, **Observation**, **Condition**, **Practitioner**, **Organization**).
-2.  **Standardisasi Klinis:** Menerapkan sistem kode standar **SNOMED CT** dan **LOINC** untuk memastikan pemahaman data klinis yang universal.
-3.  **Output Dokumen:** Membuat dan memvalidasi **Bundle Document** (Surat Rujukan Digital) yang sesuai standar FHIR untuk pertukaran data yang bersifat _immutable_.
-4.  **Efisiensi:** Membangun arsitektur _template_ dan _ID mapping_ yang terstruktur untuk alur kerja yang cepat dan berulang.
+Dokumen ini merinci implementasi end-to-end standar Fast Healthcare Interoperability Resources (FHIR) Release 4, berfokus pada transisi data dari kasus klinis kompleks (Kebidanan Patologi & Operasi Seksio Sesarea) hingga siklus _billing_ dan _adjudication_ finansial penuh.
 
 ---
 
-### 2. Lingkungan Teknis
+### 1. Tujuan Proyek dan Pencapaian Implementasi
 
-| Komponen              | Deskripsi                                                | Nilai/Endpoint                                       |
-| :-------------------- | :------------------------------------------------------- | :--------------------------------------------------- |
-| **FHIR Server**       | Digunakan sebagai lingkungan pengujian _non-production_. | `http://hapi.fhir.org/baseR4/`                       |
-| **Metode Komunikasi** | Protokol standar untuk pertukaran data.                  | **HTTPS REST API** (`POST`, `GET`)                   |
-| **Standard Coding**   | Standar yang digunakan untuk kodifikasi data klinis.     | **SNOMED CT** (Diagnosis), **LOINC** (Observasi/Lab) |
+Proyek ini mendemonstrasikan kapabilitas _workflow_ FHIR yang _interoperable_ dan _auditable_, dengan metrik keberhasilan utama meliputi:
 
----
-
-### 3. Struktur Direktori Proyek
-
-Proyek diorganisasikan untuk memisahkan _input data_ dari _template_ generik dan _output dokumen_ final.
-
-| Direktori/File              | Fungsi                                                                                                     |
-| :-------------------------- | :--------------------------------------------------------------------------------------------------------- |
-| `payloads/`                 | Berisi file JSON spesifik per pasien yang digunakan untuk _POST_ Resource individu.                        |
-| `templates/`                | Berisi _template_ JSON generik yang digunakan sebagai _blueprint_ untuk efisiensi.                         |
-| `templates/id_mapping.json` | File logistik kritis untuk menyimpan ID permanen FHIR yang digunakan sebagai _reference_.                  |
-| `rujukan/`                  | Berisi _output_ final berupa **FHIR Bundle Document** (tipe `document`), siap untuk pertukaran data legal. |
+1.  **Cakupan Resource yang Ekstensif:** Menguasai _POST_ dan _Reference_ lebih dari 20 _Resource_ dari tiga domain utama: Klinis, Logistik/SDM, dan Finansial.
+2.  **Integrasi Lintas Domain:** Menghubungkan data Prosedural (**Procedure**) dengan Logistik (**Location**, **PractitionerRole**) dan Finansial (**Claim**).
+3.  **Siklus Finansial Penuh:** Melaksanakan dan mendokumentasikan proses _billing_ lengkap (**Claim** $\rightarrow$ **ClaimResponse** $\rightarrow$ **ExplanationOfBenefit**), mencakup peran Provider dan Payer.
+4.  **Adopsi Standar Terminologi:** Konsisten menggunakan sistem kode standar **SNOMED CT**, **LOINC**, dan **UCUM** untuk menjamin interpretasi data yang universal dan akurat.
+5.  **Arsitektur Dokumentasi Profesional:** Memelihara _ID Mapping_ dan _Terminology Registry_ terpusat sebagai sumber kebenaran tunggal (_Single Source of Truth_).
 
 ---
 
-### 4. Ringkasan Data Klinis dan Mapping
+### 2. Lingkungan Teknis dan Standar
 
-Data berikut merupakan hasil dari _request_ _POST_ ke FHIR Server dan berfungsi sebagai jembatan _mapping_ internal ke Resource FHIR.
-
-| Resource           | Kasus 1: Siti (Preeklampsia) | Kasus 2: Susi (Anemia)               | Keterangan Klinis                          |
-| :----------------- | :--------------------------- | :----------------------------------- | :----------------------------------------- |
-| **Patient ID**     | `51664913`                   | `51665620`                           | ID Identitas Pasien                        |
-| **Encounter ID**   | `51664974`                   | `51665621`                           | ID Kunjungan ANC                           |
-| **Observation ID** | `51664990` (TTV)             | `51665622` (Hb: 9.5 g/dL)            | Data Kuantitatif Klinis                    |
-| **Condition ID**   | `51665484` (Preeklampsia)    | `51665624` (Anemia during pregnancy) | Diagnosis                                  |
-| **Nakes ID**       | `51664917`                   | `51664917`                           | ID Practitioner (Bidan Rina, S.ST)         |
-| **Faskes ID**      | `51664973`                   | `51664973`                           | ID Organization (Klinik Pratama Sejahtera) |
+| Komponen              | Deskripsi                                                              | Nilai/Endpoint                               |
+| :-------------------- | :--------------------------------------------------------------------- | :------------------------------------------- |
+| **FHIR Server**       | Lingkungan pengujian _non-production_ untuk validasi Resource FHIR R4. | `http://hapi.fhir.org/baseR4/`               |
+| **Metode Komunikasi** | Protokol standar untuk pertukaran data.                                | **HTTPS REST API** (`POST`, `GET`, `SEARCH`) |
+| **Standar Klinis**    | Kodifikasi untuk diagnosis, prosedur, dan obat.                        | **SNOMED CT**                                |
+| **Standar Observasi** | Kodifikasi untuk hasil laboratorium dan tanda vital.                   | **LOINC**, **UCUM**                          |
+| **Tooling**           | Editor yang digunakan untuk manajemen _payload_ dan dokumentasi.       | **VS Code**                                  |
 
 ---
 
-### 5. Alur Kerja dan Validasi
+### 3. Struktur Direktori dan Manajemen Logistik
 
-#### 5.1. Alur Kerja Resource Individual (POST)
+Struktur direktori dirancang untuk memisahkan data spesifik pasien dari _master data_ yang dapat digunakan kembali, memastikan pemeliharaan yang efisien.
 
-Setiap kasus dicatat melalui _request_ _POST_ berurutan, memastikan integritas referensial:
-
-$$\text{Patient} \rightarrow \text{Encounter} \rightarrow \text{Observation} \rightarrow \text{Condition}$$
-
-#### 5.2. Validasi Data (GET)
-
-Integritas data divalidasi dengan _search parameter_ FHIR yang menghubungkan _resources_ ke pasien:
-
-$$\text{GET /}[Resource]?\text{subject:Patient}=[ID\_PASIEN]$$
-
-- **Validasi Sukses:** _GET_ terhadap `Observation` dan `Condition` berhasil mengembalikan _resources_ yang terhubung dengan `Patient` yang bersangkutan.
-
-#### 5.3. Finalisasi Dokumen
-
-Dokumen rujukan (Surat Rujukan Digital) dihasilkan sebagai **Bundle `document`** yang berpusat pada _Resource_ **Composition**. _Composition_ merangkum data klinis kunci (`Condition` dan `Observation`) dan menyertakan semua _Resource_ pendukung (`Patient`, `Encounter`, dll.) dalam _array_ `entry`.
+| Direktori/File                            | Fungsi                                                                                                          | Status Implementasi |
+| :---------------------------------------- | :-------------------------------------------------------------------------------------------------------------- | :------------------ |
+| `payload_json/diana/`                     | Berisi semua _payload_ JSON spesifik untuk Kasus Diana (SC, Medikasi, Klaim).                                   | Selesai             |
+| `payload_json/master_data/`               | Berisi _Resource_ dasar: **Organization**, **Practitioner**, **Medication**, **Location** yang bersifat statis. | Selesai             |
+| `documentation/id_mapping.json`           | Log _ID mapping_ semua _Resource_ yang berhasil di-_POST_, digunakan sebagai _reference_ logistik.              | Final               |
+| `documentation/terminology_registry.json` | _Registry_ terpusat yang mencakup semua kode SNOMED, LOINC, dan kode finansial yang digunakan.                  | Final               |
+| `rujukan/`                                | Berisi _output_ **FHIR Bundle Document** (dicapai di fase awal).                                                | Dicapai             |
 
 ---
 
-### 6. Kesimpulan Implementasi
+### 4. Ringkasan Resource yang Dikuasai (Kasus Seksio Sesarea - Diana)
 
-Proyek ini berhasil membuktikan kemampuan mengelola data pasien kebidanan patologi sesuai standar FHIR R4. Keberhasilan utama terletak pada **skalabilitas** dan **efisiensi _workflow_** melalui penggunaan _template_ yang terstruktur dan produksi dokumen legal (`Bundle document`) yang siap dipertukarkan.
+Kasus ini menjadi bukti penguasaan _Resource_ dari domain Klinis, Logistik, hingga Finansial, dengan skenario _maternity_ yang kompleks.
+
+#### 4.1. Resource Klinis dan Prosedural
+
+| Resource Type                | Contoh Implementasi                                     | ID Kunci                  |
+| :--------------------------- | :------------------------------------------------------ | :------------------------ |
+| **Patient**                  | Ibu Diana & Bayi Diana.                                 | `51670077` / `51836983`   |
+| **Encounter**                | Kunjungan Rawat Inap/Perioperatif.                      | `51670081`                |
+| **Condition**                | Diagnosis: Plasenta Previa Totalis (Mendasari SC).      | `51786524`                |
+| **Procedure**                | Seksio Sesarea & Prosedur Perawatan Bayi Baru Lahir.    | `51790406` / `51847868`   |
+| **MedicationAdministration** | Pemberian Bupivacaine (Anastesi) dan Ketorolac (Nyeri). | `51906239` / `51849689`   |
+| **Observation**              | TTV, Pemeriksaan Kebidanan, Apgar Score, BB/PB.         | `51774232` s/d `51847402` |
+
+#### 4.2. Resource Logistik dan SDM
+
+| Resource Type        | Contoh Implementasi                                                      | ID Kunci                  |
+| :------------------- | :----------------------------------------------------------------------- | :------------------------ |
+| **Organization**     | RSIA Bunda Utama (Provider) & Asuransi Sehat Sejahtera (Payer).          | `51840814` / `51907580`   |
+| **PractitionerRole** | Mendefinisikan peran Dokter Bedah, Anastesi, Anak, dan Perawat.          | `51844904` s/d `51904339` |
+| **Location**         | Pemetaan lokasi logistik: Kamar Operasi, Rawat Inap Ibu, Ruang Neonatus. | `51843117` s/d `51902971` |
+
+#### 4.3. Resource Finansial (Siklus Klaim Penuh)
+
+| Resource Type                  | Keterangan                                                                             | ID Kunci   |
+| :----------------------------- | :------------------------------------------------------------------------------------- | :--------- |
+| **Claim**                      | Pengajuan _Billing_ oleh Provider. Mencakup Item Prosedur, Nakes, Obat, dan Akomodasi. | `51907108` |
+| **ClaimResponse**              | Balasan dan _Adjudication_ Resmi dari Payer.                                           | `51915560` |
+| **ExplanationOfBenefit (EOB)** | Laporan Final kepada Pasien, merinci Benefit dan Tanggungan (Co-pay).                  | `51915979` |
+
+---
+
+### 5. Kesimpulan Implementasi
+
+Proyek ini berhasil memvalidasi alur data yang **komprehensif** di FHIR R4, membuktikan kapabilitas untuk: (1) merekam data klinis _real-time_ dan _granular_; (2) menghubungkannya dengan _Resource_ logistik (SDM dan Fasilitas); dan (3) mentransformasikannya menjadi dokumen finansial yang **terintegrasi** dan **transparan** untuk pertukaran data antar sistem kesehatan.
 
 ---

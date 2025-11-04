@@ -1,0 +1,16 @@
+{
+  "resourceType": "Organization",
+  "name": "Laboratorium Sentral Fasyankes",
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+          "code": "lab",
+          "display": "Laboratory"
+        }
+      ]
+    }
+  ],
+  "active": true
+}

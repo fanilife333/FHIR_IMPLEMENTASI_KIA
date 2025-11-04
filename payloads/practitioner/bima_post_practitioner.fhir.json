@@ -1,0 +1,23 @@
+{
+  "resourceType": "Practitioner",
+  "name": [
+    {
+      "text": "Dr. Bima, Sp.OG",
+      "family": "Bima",
+      "given": ["Bima"]
+    }
+  ],
+  "identifier": [
+    {
+      "system": "http://satusehat.id/nakes-id",
+      "value": "IDNKS7654321"
+    }
+  ],
+  "qualification": [ 
+    {
+      "code": {
+        "text": "Spesialis Obstetri dan Ginekologi"
+      }
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "resourceType": "Claim",
+  "id": "[ID_CLAIM_YANG_DIDAPAT]",
+  "status": "active",
+  "type": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/claim-type",
+        "code": "institutional",
+        "display": "Institutional" // Klaim untuk Rawat Inap/Institusi (RS)
+      }
+    ]
+  },
+  "use": "claim",
+  
+  // 1. DATA DASAR
+  "patient": {
+    "reference": "Patient/[ID_PASIEN]" // ID Pasien
+  },
+  "billablePeriod": {
+    "start": "[TANGGAL_MASUK_ISO]",
+    "end": "[TANGGAL_KELUAR_ISO]" // Periode perawatan yang ditagihkan
+  },
+  "created": "[TANGGAL_KLAIM_DIBUAT_ISO]", // Tanggal dibuatnya resource ini
+  "provider": {
+    "reference": "Organization/[ID_FASYANKES_PROVIDER]" // ID Rumah Sakit yang mengklaim
+  },
+
+  // 2. DIAGNOSA (WAJIB)
+  "diagnosis": [
+    {
+      "sequence": 1,
+      "diagnosisReference": {
+        "reference": "Condition/[ID_KONDISI_UTAMA]" // Referensi ke Condition/51786524 (Plasenta Previa)
+      }
+    }
+    // Diagnosis sekunder dapat ditambahkan di sini
+  ],
+
+  // 3. ITEM LAYANAN (LINE ITEMS)
+  "item": [
+    // ITEM 1: PROSEDUR UTAMA (BEDAH/OPERASI)
+    {
+      "sequence": 1,
+      "productOrService": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "[KODE_SNOMED_PROSEDUR]", // Contoh: 200144004 (Caesarean section)
+            "display": "[NAMA_PROSEDUR]"
+          }
+        ]
+      },
+      "unitPrice": { "value": [BIAYA_SATUAN], "currency": "IDR" },
+      "quantity": { "value": 1 },
+      "encounter": { "reference": "Encounter/[ID_ENCOUNTER]" }
+    },
+    // ITEM 2: LAYANAN PROFESIONAL (DOKTER)
+    {
+      "sequence": 2,
+      "productOrService": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "[KODE_SNOMED_SPESIALISASI]", // Contoh: 88189002 (Anesthesiologist Fee)
+            "display": "[NAMA_LAYANAN_PROFESSIONAL]"
+          }
+        ]
+      },
+      "unitPrice": { "value": [BIAYA_DOKTER], "currency": "IDR" },
+      "quantity": { "value": 1 },
+      "encounter": { "reference": "Encounter/[ID_ENCOUNTER]" }
+    },
+    // ITEM 3: AKOMODASI (KAMAR INAP)
+    {
+      "sequence": 3,
+      "productOrService": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/service-product",
+            "code": "room",
+            "display": "Room accommodation ([KELAS_KAMAR])"
+          }
+        ]
+      },
+      "unitPrice": { "value": [BIAYA_PER_HARI], "currency": "IDR" },
+      "quantity": { "value": [JUMLAH_HARI], "unit": "days" },
+      "locationReference": { "reference": "Location/[ID_LOKASI_KAMAR]" } // Lokasi/51902539
+    },
+    // ITEM 4: OBAT/ALKES/BMHP
+    {
+      "sequence": 4,
+      "productOrService": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "[KODE_SNOMED_OBAT]", // Contoh: 103036009 (Ketorolac)
+            "display": "[NAMA_OBAT_ATAU_ALKES]"
+          }
+        ]
+      },
+      "unitPrice": { "value": [BIAYA_OBAT], "currency": "IDR" },
+      "quantity": { "value": [JUMLAH_UNIT] },
+      "encounter": { "reference": "Encounter/[ID_ENCOUNTER]" }
+    }
+  ],
+
+  // 4. INFORMASI PENDUKUNG (REFERENSI KE RESOURCE KLINIS)
+  "supportingInfo": [
+    {
+      "sequence": 1,
+      "category": { "coding": [{ "code": "info" }] },
+      "valueReference": { "reference": "Procedure/[ID_PROSEDUR_SC]" } 
+    },
+    {
+      "sequence": 2,
+      "category": { "coding": [{ "code": "info" }] },
+      "valueReference": { "reference": "MedicationAdministration/[ID_MEDADMIN_1]" } // Administrasi Obat Nyeri
+    },
+    {
+      "sequence": 3,
+      "category": { "coding": [{ "code": "info" }] },
+      "valueReference": { "reference": "MedicationAdministration/[ID_MEDADMIN_2]" } // Administrasi Obat Anastesi
+    },
+    {
+      "sequence": 4,
+      "category": { "coding": [{ "code": "info" }] },
+      "valueReference": { "reference": "Procedure/[ID_PROSEDUR_BAYI]" } 
+    }
+  ],
+  
+  // 5. TOTAL BIAYA (JUMLAH SEMUA ITEM)
+  "total": {
+    "value": [TOTAL_BIAYA_KESELURUHAN],
+    "currency": "IDR"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "resourceType": "Procedure",
+  "status": "completed",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "103699006", 
+        "display": "Newborn procedure" 
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/51836983" 
+  },
+  "encounter": {
+    "reference": "Encounter/51670081"
+  },
+  "performedDateTime": "2025-11-18T09:40:00+07:00", 
+  "performer": [
+    {
+      "actor": {
+        "reference": "Practitioner/51664917"
+      }
+    }
+  ],
+  "location": {
+    "reference": "Location/51843117"
+  },
+  "focalDevice": [
+    {
+      "action": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "736388004",
+            "display": "Administration of Vitamin K"
+          }
+        ]
+      }
+    },
+    {
+      "action": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "170371001", 
+            "display": "Hepatitis B immunization"
+          }
+        ]
+      }
+    }
+  ]
+}

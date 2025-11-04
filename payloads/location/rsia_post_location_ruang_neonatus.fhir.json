@@ -1,0 +1,17 @@
+{
+  "resourceType": "Location",
+  "name": "Ruang Neonatus/NICU Level I",
+  "status": "active",
+  "physicalType": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+        "code": "area",
+        "display": "Area" 
+      }
+    ]
+  },
+  "managingOrganization": {
+    "reference": "Organization/51840814"
+  }
+}

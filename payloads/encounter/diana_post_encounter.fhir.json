@@ -1,0 +1,17 @@
+{
+  "resourceType": "Encounter",
+  "status": "finished",
+  "class": { "code": "AMB", "display": "Ambulatory" },
+  
+  "subject": { "reference": "Patient/51670077" }, 
+  
+  "period": { "start": "2025-11-01T10:00:00+07:00", "end": "2025-11-01T10:30:00+07:00" },
+  
+  "participant": [
+    {
+      "type": [ { "text": "Bidan yang menangani" } ],
+      "individual": { "reference": "Practitioner/51664917" } 
+    }
+  ],
+  "serviceProvider": { "reference": "Organization/51664973" } 
+}

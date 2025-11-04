@@ -1,0 +1,66 @@
+{
+  "resourceType": "Observation",
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "vital-signs"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "85353-1",
+        "display": "Vital signs panel with BMI supporting data"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/51836983" 
+  },
+  "encounter": {
+    "reference": "Encounter/51670081" 
+  },
+  "effectiveDateTime": "2025-11-18T09:35:00+07:00",
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "29463-7",
+            "display": "Body weight"
+          }
+        ]
+      },
+      "valueQuantity": {
+        "value": 3.1,
+        "unit": "kg",
+        "system": "http://unitsofmeasure.org",
+        "code": "kg"
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "8302-2",
+            "display": "Body height"
+          }
+        ]
+      },
+      "valueQuantity": {
+        "value": 48.0,
+        "unit": "cm",
+        "system": "http://unitsofmeasure.org",
+        "code": "cm"
+      }
+    }
+  ]
+}

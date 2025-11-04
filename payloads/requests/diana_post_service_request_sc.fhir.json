@@ -1,0 +1,47 @@
+{
+  "resourceType": "ServiceRequest",
+  "status": "active",
+  "intent": "order",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "387713003",
+          "display": "Request for surgical procedure"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "200144004",
+        "display": "Caesarean section"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/51670077"
+  },
+  "occurrenceDateTime": "2025-11-03T14:00:00+07:00", 
+  "requester": {
+    "reference": "Practitioner/51664917" 
+  },
+  "performer": [
+    {
+      "reference": "Practitioner/51838958" 
+    }
+  ],
+  "locationReference": [ 
+    {
+      "reference": "Location/51843117" 
+    }
+  ],
+  "reasonReference": [
+    {
+      "reference": "Condition/51786524"
+    }
+  ]
+}

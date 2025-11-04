@@ -1,0 +1,27 @@
+{
+  "resourceType": "List",
+  "status": "current",
+  "mode": "working", 
+  "title": "Daftar Masalah Aktif Kebidanan",
+  "code": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/list-example-codes",
+        "code": "problems", 
+        "display": "Problem List"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/51665620"
+  },
+  "date": "2026-01-15T10:00:00+07:00",
+  "entry": [ 
+    {
+      "item": {
+        "reference": "Condition/51665624",
+        "display": "Anemia during pregnancy"
+      }
+    }
+  ]
+}

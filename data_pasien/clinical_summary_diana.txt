@@ -1,0 +1,91 @@
+/* ======================================================
+  RINGKASAN DATA KLINIS & FINANSIAL FHIR - PASIEN IBU DIANA 
+======================================================
+Nama Pasien (Asumsi): Ibu Diana
+NIK Pasien (Asumsi): 3201011211870001
+Tanggal Kunjungan: 2025-11-18 (Tanggal Operasi)
+------------------------------------------------------ 
+
+--- A. IDENTITAS & KUNJUNGAN (MASTER DATA) ---
+
+1.  Resource Type: Patient             | ID FHIR: 51670077 
+    Keterangan: Data demografi dasar Ibu Diana.
+
+2.  Resource Type: Encounter           | ID FHIR: 51670081 
+    Keterangan: Kunjungan Rawat Inap/Perioperatif (Mencakup SC dan Rawat Inap).
+
+3.  Resource Type: Patient (Bayi)       | ID FHIR: 51836983 
+    Keterangan: Data demografi Bayi Diana (lahir hidup).
+
+--- B. DATA PENDUKUNG KLINIS (OBSERVATION & ALLERGY) ---
+
+4.  Resource Type: Observation (Tanda Vital) | ID FHIR: 51774232 
+    Keterangan: TTV Lengkap Pra-Op.
+
+5.  Resource Type: Observation (Pemeriksaan Kebidanan) | ID FHIR: 51783445 
+    Keterangan: GA, TFU, DJJ, dan Presentasi Janin (Sungsang).
+
+6.  Resource Type: Observation (Laboratorium Pra-Op) | ID FHIR: 51788745 
+    Keterangan: Hasil Lab Wajib (Hemoglobin 10.5 g/dL, Goldar A).
+
+7.  Resource Type: AllergyIntolerance  | ID FHIR: 51789802 
+    Keterangan: Status Alergi (Ceftriaxone Negatif).
+
+8.  Resource Type: Observation (Apgar Score Bayi) | ID FHIR: 51847215 
+    Keterangan: Hasil Skor Apgar Bayi.
+
+9.  Resource Type: Observation (BB/PB Bayi) | ID FHIR: 51847402 
+    Keterangan: Berat Badan/Panjang Badan Bayi.
+
+--- C. KEPUTUSAN KLINIS & TINDAKAN ---
+
+10. Resource Type: Condition (Diagnosis) | ID FHIR: 51786524 
+    Kode SNOMED: 198903000 (Placenta previa with hemorrhage)
+    Keterangan: Diagnosis Primer yang mendasari SC.
+
+11. Resource Type: Procedure (SC)      | ID FHIR: 51790406 
+    Kode SNOMED: 200144004 (Caesarean section). Status: **completed**.
+
+12. Resource Type: Procedure (Tindakan Bayi) | ID FHIR: 51847868 
+    Keterangan: Tindakan Perawatan Bayi Baru Lahir (Vit K & HB-0).
+
+13. Resource Type: MedicationAdministration (Anastesi) | ID FHIR: 51906239 
+    Keterangan: Pemberian Bupivacaine oleh Dr. Tio (Anastesi).
+
+14. Resource Type: MedicationAdministration (Pereda Nyeri) | ID FHIR: 51849689 
+    Keterangan: Pemberian Ketorolac oleh Perawat Sinta (Pasca-Op).
+
+--- D. NAKES, LOKASI & LOGISTIK ---
+
+15. Resource Type: PractitionerRole (Bedah) | ID FHIR: 51844904 
+    Keterangan: Peran Dr. Bima, Sp.OG (Dokter Bedah).
+
+16. Resource Type: PractitionerRole (Anastesi) | ID FHIR: 51904339 
+    Keterangan: Peran Dr. Tio, Sp.An (Dokter Anastesi).
+
+17. Resource Type: PractitionerRole (Anak) | ID FHIR: 51903788 
+    Keterangan: Peran Dr. Surya, Sp.A (Dokter Anak).
+
+18. Resource Type: Location (OK)      | ID FHIR: 51843117 
+    Keterangan: Lokasi Operasi.
+
+19. Resource Type: Location (RI Ibu)  | ID FHIR: 51902539 
+    Keterangan: Lokasi Rawat Inap Ibu (Kelas II).
+
+20. Resource Type: Location (RI Neonatus) | ID FHIR: 51902971 
+    Keterangan: Lokasi Observasi Bayi Pasca-Op.
+
+--- E. FINANSIAL (SIKLUS KLAIM) ---
+
+21. Resource Type: Claim              | ID FHIR: 51907108 
+    Keterangan: Klaim Billing Lengkap dari RSIA Bunda Utama.
+
+22. Resource Type: Organization (Payer) | ID FHIR: 51907580 
+    Keterangan: Entitas Asuransi Sehat Sejahtera.
+
+23. Resource Type: ClaimResponse      | ID FHIR: 51915560 
+    Keterangan: Balasan Payer: Klaim Disetujui (Outcome: complete).
+
+24. Resource Type: ExplanationOfBenefit (EOB) | ID FHIR: 51915979 
+    Keterangan: Ringkasan Tagihan untuk Pasien (Menunjukkan Co-pay).
+*/

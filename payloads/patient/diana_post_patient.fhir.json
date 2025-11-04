@@ -1,12 +1,12 @@
 {
   "resourceType": "Patient",
-  "name": [ { "text": "Susi Lestari" } ],
+  "name": [ { "text": "Diana Putri" } ],
   "gender": "female",
-  "birthDate": "1995-09-05",
+  "birthDate": "1990-01-01",
   "identifier": [
     {
       "system": "http://satusehat.id/nik",
-      "value": "3374998877661122"
+      "value": "3374010101900001"
     }
   ]
 }
